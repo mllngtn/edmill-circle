@@ -39,7 +39,7 @@
                     in stock
                 </span>
                 <span 
-                    v-else-if="5 >= book.availableStock > 0"
+                    v-else-if="5 >= book.availableStock && book.availableStock > 0"
                     class="button small warning"
                 >
                     low stock

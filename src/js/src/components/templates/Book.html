@@ -32,6 +32,7 @@
             <button 
                 v-if="book.availableStock > 0"
                 class="button"
+                v-on:click="purchaseBook"
             >
                 Buy now
             </button>
@@ -43,7 +44,7 @@
                 Out of stock
             </button>
             <p 
-                v-if="5 >= book.availableStock > 0"
+                v-if="5 >= book.availableStock && book.availableStock > 0"
                 class="small warning"
             >
                 Only {{ book.availableStock }} left in stock
