@@ -5,7 +5,7 @@ html {
 body {
     min-width: 100vw;
     min-height: 100vh;
-    background-color: var(--primary-lighter);
+    background-color: var(--bg-after);
 }
 
 .page {
@@ -13,6 +13,7 @@ body {
     margin: 0 auto;
     max-width: var(--page-width);
     min-height: 100vh;
+    background-color: var(--body-bg);
     box-shadow: 1px 1px 50px var(--body-bg);
 }
 

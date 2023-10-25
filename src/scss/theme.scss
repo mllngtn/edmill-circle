@@ -4,11 +4,12 @@
     /*
         Colours
     */
-    --body: #342e3b;
+    --body: #021620;
     --primary: var(--body);
     --primary-hover: #136a95;
-    --body-inverted: #ebefef;
+    --body-inverted: #d2e5f1;
     --body-inverted-hover: var(--primary);
-    --body-bg: #ebefef;
+    --body-bg: #f4fbff;
+    --bg-after: #d2e5f1;
     --primary-lighter: color-mix(in srgb, var(--primary-hover) 5%, transparent);
 }
