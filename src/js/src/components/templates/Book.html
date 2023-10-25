@@ -1,25 +1,55 @@
 <template v-if="book">
-    <router-link to="/">
+    <router-link 
+        class="back"
+        to="/"
+    >
         &lt; Back
     </router-link>
-    <h2>
-        {{ book.title }}
-    </h2>
-    <h3>
-        {{ book.author }}
-    </h3>
-    <p>
-        Price: ${{ book.price }}
-    </p>
-    <p class="small">
-        ISBN: {{ book.isbn }}
-    </p>
-    <button v-if="book.availableStock > 0">
-        Buy now
-    </button>
-    <button disabled v-else>
-        Out of stock
-    </button>
+    <div class="book__details">
+        <img 
+            loading="lazy"
+            src="../../../../assets/images/cover.jpg" 
+            alt=""
+            width="300"
+            height="450"
+        />
+        <div>
+            <h2>
+                {{ book.title }}
+            </h2>
+            <p>
+                {{ book.author }}
+            </p>
+            <p class="small">
+                 Non eram nescius, Brute, cum, quae summis ingeniis exquisitaque doctrina philosophi Graeco sermone tractavissent, ea Latinis litteris mandaremus, fore ut hic noster labor in varias reprehensiones incurreret
+            </p>
+            <p class="small">
+                ISBN: {{ book.isbn }}
+            </p>
+            <p>
+                Price: <b>${{ book.price }}</b>
+            </p>
+            <button 
+                v-if="book.availableStock > 0"
+                class="button"
+            >
+                Buy now
+            </button>
+            <button  
+                v-else
+                class="button"
+                disabled
+            >
+                Out of stock
+            </button>
+            <p 
+                v-if="5 >= book.availableStock > 0"
+                class="small warning"
+            >
+                Only {{ book.availableStock }} left in stock
+            </p>
+        </div>
+    </div>
 </template>
 <p v-else>
     Loading...
