@@ -4,17 +4,17 @@
 
 	import { config } from '../config/config.js';
 
-    import { useResultsStore } from '../stores/resultsStore.js';
+    import { useBookListStore } from '../stores/bookListStore.js';
 
     import { useFetch } from '../utils/useFetch.js';
 
-    const resultsStore = useResultsStore();
+    const bookListStore = useBookListStore();
 
     // request list of all books from api
     useFetch({
         url: config.url,
         queryName: 'books',
-        callback: resultsStore.updateResults,
+        callback: bookListStore.updateBookList,
     });
 
 </script>

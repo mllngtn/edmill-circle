@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
-export const useResultsStore = defineStore('results', () => {
+export const useBookListStore = defineStore('bookListStore', () => {
 
     const books = ref();
     const loading = ref(true);
@@ -12,7 +12,7 @@ export const useResultsStore = defineStore('results', () => {
 
     }
 
-    function updateResults(data) {
+    function updateBookList(data) {
 
         books.value = data.books;
 
@@ -24,7 +24,7 @@ export const useResultsStore = defineStore('results', () => {
         books,
         loading,
         setLoading,
-        updateResults,
+        updateBookList,
     };
 
 });

@@ -1,4 +1,4 @@
-<template v-if="!resultsStore.loading">
+<template v-if="!bookListStore.loading">
     <h2>
         Today's picks
     </h2>
@@ -15,7 +15,7 @@
         class="grid books"
     >
         <li
-            v-for="book in resultsStore.books"
+            v-for="book in bookListStore.books"
             :key="book.id"
             class="grid-item small"
         >
