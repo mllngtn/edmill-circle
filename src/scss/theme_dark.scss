@@ -1,0 +1,22 @@
+.theme-dark {
+    /*
+        Colours
+    */
+    --body: #ddd;
+    --primary: var(--body);
+    --primary-hover: #fff;
+    --body-inverted: #03141d;
+    --body-inverted-hover: var(--primary-hover);
+    --body-bg: #062333;
+    --intro-text: var(--body);
+    --site-icon: var(--body-inverted);
+    --primary-lighter: color-mix(in srgb, var(--primary-hover) 1.5%, transparent);
+
+    /*
+        background image & gradients
+    */
+    --bg-img: none;
+    --bg-cover: center;
+    --bg-before: #03141d;
+    --bg-after: #03141d;
+}

@@ -1,0 +1,22 @@
+.theme-light {
+    /*
+        Colours
+    */
+    --body: #06283a;
+    --primary: var(--body);
+    --primary-hover: #136a95;
+    --body-inverted: #d2e5f1;
+    --body-inverted-hover: var(--primary);
+    --body-bg: #d2e5f1;
+    --intro-text: var(--body);
+    --intro-hover: var(--primary-hover);
+    --primary-lighter: color-mix(in srgb, var(--primary-hover) 5%, transparent);
+
+    /*
+        background image & gradients
+    */
+    --bg-img: none;
+    --bg-cover: center;
+    --bg-before: #e7f2f8;
+    --bg-after: #e7f2f8;
+}

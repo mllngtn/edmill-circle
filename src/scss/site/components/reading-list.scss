@@ -1,0 +1,75 @@
+.books {
+    grid-template-columns: repeat(auto-fill, calc(50% - 0.5rem));
+    grid-gap: 0.5rem;
+
+    @media all and (min-width: $sml) {
+        grid-template-columns: repeat(auto-fill, calc(100% / 3 - 0.75rem));
+        grid-gap: 0.75rem;
+    }
+
+    @media all and (min-width: $med) {
+        grid-template-columns: repeat(auto-fill, calc(50% - 0.5rem));
+        grid-gap: 0.5rem;
+    }
+
+    @media all and (min-width: $ml) {
+        grid-template-columns: repeat(auto-fill, calc(100% / 3 - 0.75rem));
+        grid-gap: 0.75rem;
+    }
+
+    @media all and (min-width: $lge) {
+        grid-template-columns: repeat(auto-fill, calc(25% - 0.75rem));
+    }
+}
+
+.filter {
+    margin-right: var(--global-margin);
+    margin-bottom: var(--global-margin);
+    position: relative;
+    display: inline-block;
+}
+
+.filter__button {
+    border-radius: 0;
+    min-width: 200px;
+    padding: 0.25rem 1.5rem;
+
+    svg {
+        position: absolute;
+        height: 0.5rem;
+        top: calc(50% - 0.25rem);
+        right: 0.5rem;
+        fill: var(--body-inverted);
+    }
+
+    &:hover svg,
+    &:focus svg {
+        fill: var(--body);
+    }
+
+    &[aria-expanded='true'] svg {
+        transform: rotate(180deg);
+    }
+}
+
+ul.filter__options {
+    list-style-type: none;
+    margin: 0;
+}
+
+.filter__options {
+    position: absolute;
+    z-index: 1;
+    background: var(--body-bg);
+    color: var(--body);
+    padding: 0.5rem;
+    width: 200px;
+    border: 1px solid var(--body);
+    border-top: none;
+    box-sizing: border-box;
+    box-shadow: 1px 10px 10px var(--primary-lighter);
+}
+
+.filter__options label {
+    margin-left: 0.25rem;
+}
