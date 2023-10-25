@@ -3,7 +3,13 @@
         Today's picks
     </h2>
     <p>
-        Non eram nescius, Brute, cum, quae summis ingeniis exquisitaque doctrina philosophi Graeco sermone tractavissent, ea Latinis litteris mandaremus, fore ut hic noster labor in varias reprehensiones incurreret. nam quibusdam, et iis quidem non admodum indoctis, totum hoc displicet philosophari. quidam autem non tam id reprehendunt, si remissius agatur, sed tantum studium tamque multam operam ponendam in eo non arbitrantur.
+        Non eram nescius, Brute, cum, quae summis ingeniis exquisitaque 
+        doctrina philosophi Graeco sermone tractavissent, ea Latinis 
+        litteris mandaremus, fore ut hic noster labor in varias 
+        reprehensiones incurreret. nam quibusdam, et iis quidem non admodum 
+        indoctis, totum hoc displicet philosophari. quidam autem non tam id 
+        reprehendunt, si remissius agatur, sed tantum studium tamque multam 
+        operam ponendam in eo non arbitrantur.
     </p>
     <ul
         class="grid books"
@@ -13,7 +19,7 @@
             :key="book.id"
             class="grid-item small"
         >
-            <router-link :to="{ name: 'Book', params: { id: book.id } }">
+            <router-link :to="{ name: 'BookSingle', params: { id: book.id } }">
                 <picture>
                     <img 
                         loading="lazy"
@@ -54,6 +60,8 @@
         </li>
     </ul>
 </template>
-<p v-else>
-    Loading...
-</p>
+<template v-else>
+    <div class="loading">
+        <div class="spinner" title="loading"></div>
+    </div>
+</template>

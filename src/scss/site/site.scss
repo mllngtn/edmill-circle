@@ -5,7 +5,9 @@
 @import './shared/containers';
 @import './shared/typography';
 @import './shared/grid';
+@import './shared/loading';
+@import './shared/buttons';
 
-@import './components/hero';
-@import './components/results';
-@import './components/result';
+@import './components/header';
+@import './components/book-single';
+@import './components/book-list';

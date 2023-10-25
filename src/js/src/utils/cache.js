@@ -18,7 +18,7 @@ function save(query, data) {
 
     } catch (err) {
 
-        console.log(err);
+        console.log(err); // eslint-disable-line no-console
 
     }
 

@@ -50,6 +50,7 @@ function jsLint() {
         .pipe(
             eslint({
                 useEslintrc: true,
+                fix: true,
             }),
         )
         .pipe(eslint.format());

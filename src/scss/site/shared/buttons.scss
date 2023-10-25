@@ -1,0 +1,40 @@
+button,
+.button {
+    padding: 0.25rem 1rem;
+    border: 1px solid var(--primary-hover);
+    background-color: var(--primary-hover);
+    color: var(--body-bg);
+    border-radius: 5px;
+
+    &.warning {
+        background-color: var(--warning);
+        border-color: var(--warning);
+        color: initial;
+    }
+
+    &.disabled,
+    &:disabled {
+        background-color: var(--disabled);
+        border-color: var(--disabled);
+        color: initial;
+    }
+
+    &:hover,
+    &:focus {
+        border: 1px solid var(--body);
+        background-color: transparent;
+        color: var(--body);
+
+        &.warning {
+            background-color: transparent;
+            border-color: var(--warning-hover);
+            color: var(--warning-hover);
+        }
+
+        &:disabled {
+            background-color: var(--disabled);
+            border-color: var(--disabled);
+            color: initial;
+        }
+    }
+}

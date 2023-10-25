@@ -10,7 +10,7 @@ export function useFetch({
     queryName = null,
     callback = function doCallback() {
 
-        console.log('error: useFetch requires a callback function');
+        console.log('error: useFetch requires a callback function'); // eslint-disable-line no-console
 
     },
 }) {

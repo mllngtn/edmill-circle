@@ -39,7 +39,9 @@
         "linebreak-style": 0,
         "import/extensions": "off",
         "import/prefer-default-export": "off",
-        "arrow-body-style": ["error", "always"]
+        "arrow-body-style": ["error", "always"],
+        "vue/comment-directive": 0,
+        "vue/no-multiple-template-root": "off"
     },
     "plugins": ["import", "vue"],
 }

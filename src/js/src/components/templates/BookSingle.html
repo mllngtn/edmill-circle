@@ -18,10 +18,13 @@
                 {{ book.title }}
             </h2>
             <p>
-                {{ book.author }}
+                by <b>{{ book.author }}</b>
             </p>
             <p class="small">
-                 Non eram nescius, Brute, cum, quae summis ingeniis exquisitaque doctrina philosophi Graeco sermone tractavissent, ea Latinis litteris mandaremus, fore ut hic noster labor in varias reprehensiones incurreret
+                 Non eram nescius, Brute, cum, quae summis ingeniis
+                 exquisitaque doctrina philosophi Graeco sermone
+                 tractavissent, ea Latinis litteris mandaremus, fore
+                 ut hic noster labor in varias reprehensiones incurreret.
             </p>
             <p class="small">
                 ISBN: {{ book.isbn }}
@@ -52,6 +55,9 @@
         </div>
     </div>
 </template>
-<p v-else>
-    Loading...
-</p>
+<template v-else>
+    <div class="loading">
+        <div class="spinner" title="loading"></div>
+    </div>
+</template>
+

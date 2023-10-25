@@ -1,4 +1,4 @@
-<template src='./templates/Results.html' />
+<template src='./templates/BookList.html' />
 
 <script setup>
 
@@ -6,11 +6,11 @@
 
     import { useResultsStore } from '../stores/resultsStore.js';
 
-    const resultsStore = useResultsStore();
-
     import { useFetch } from '../utils/useFetch.js';
 
-    // grab initial results
+    const resultsStore = useResultsStore();
+
+    // request list of all books from api
     useFetch({
         url: config.url,
         queryName: 'books',

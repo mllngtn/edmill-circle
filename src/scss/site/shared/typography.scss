@@ -110,70 +110,26 @@ a {
 
 a.back {
     display: inline-block;
-    margin-bottom: 1rem;
+    margin-bottom: var(--global-margin);
 }
 
+/*
+    Global focus style
+*/
+*:focus {
+    outline: 1px dashed color-mix(in srgb, var(--primary-hover) 25%, transparent);
+}
+
+/*
+    Content elements
+*/
 small, .small {
     font-size: smaller;
-}
-
-header h1,
-header .h1 {
-    margin-bottom: -0.5rem;
-}
-
-header small.h5 {
-    font-size: 0.58rem;
-    font-style: italic;
-}
-
-.button {
-    padding: 0.25rem 1rem;
-    border: 1px solid var(--primary-hover);
-    background-color: var(--primary-hover);
-    color: var(--body-bg);
-    border-radius: 5px;
-
-    &.warning {
-        background-color: var(--warning);
-        border-color: var(--warning);
-        color: initial;
-    }
-
-    &.disabled,
-    &:disabled {
-        background-color: var(--disabled);
-        border-color: var(--disabled);
-        color: initial;
-    }
-
-    &:hover,
-    &:focus {
-        border: 1px solid var(--body);
-        background-color: transparent;
-        color: var(--body);
-
-        &.warning {
-            background-color: transparent;
-            border-color: var(--warning-hover);
-            color: var(--warning-hover);
-        }
-
-        &:disabled {
-            background-color: var(--disabled);
-            border-color: var(--disabled);
-            color: initial;
-        }
-    }
 }
 
 p.warning {
     font-style: italic;
     color: var(--warning-hover);
-}
-
-*:focus {
-    outline: 1px dashed color-mix(in srgb, var(--primary-hover) 25%, transparent);
 }
 
 li {

@@ -3,7 +3,7 @@ export function usePost({
     url = null,
     callback = function doCallback() {
 
-        console.log('error: usePost requires a callback function');
+        console.log('error: usePost requires a callback function'); // eslint-disable-line no-console
 
     },
 }) {

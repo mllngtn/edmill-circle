@@ -1,8 +1,9 @@
 .book__details {
-    display: flex;
+    @extend %flex-center;
+
     grid-gap: 1.5rem;
     flex-wrap: wrap;
-    align-items: center;
+    margin-bottom: 2rem;
 
     img {
         width: 100%;
