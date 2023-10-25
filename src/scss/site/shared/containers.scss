@@ -5,21 +5,21 @@ html {
 body {
     min-width: 100vw;
     min-height: 100vh;
-    background-color: var(--primary-hover);
+    background-color: var(--primary-lighter);
 }
 
 .page {
     width: 100%;
     margin: 0 auto;
-    background-color: var(--body-bg);
     max-width: var(--page-width);
     min-height: 100vh;
-    box-shadow: 1px 1px 50px var(--body);
+    box-shadow: 1px 1px 50px var(--body-bg);
 }
 
 header {
     width: 100%;
     margin-bottom: var(--global-margin);
+    position: relative;
 }
 
 main {
