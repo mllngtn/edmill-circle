@@ -1,3 +1,6 @@
+/*
+    styles for the 'BookList' component
+*/
 .books {
     grid-template-columns: repeat(auto-fill, calc(50% - 0.5rem));
     grid-gap: 0.5rem;
@@ -39,10 +42,10 @@
 
     &:hover,
     &:focus {
-        color: var(--primary-hover);
+        color: var(--primary);
 
         picture {
-            background-color: var(--primary-hover);
+            background-color: var(--primary);
             opacity:0.8;
         }
 

@@ -1,3 +1,6 @@
+/*
+    the building blocks of our page
+*/
 html {
     overscroll-behavior: none;
 }
@@ -5,7 +8,7 @@ html {
 body {
     min-width: 100vw;
     min-height: 100vh;
-    background-color: var(--bg-after);
+    background-color: var(--body-bg);
 }
 
 .page {
@@ -13,8 +16,8 @@ body {
     margin: 0 auto;
     max-width: var(--page-width);
     min-height: 100vh;
-    background-color: var(--body-bg);
-    box-shadow: 1px 1px 50px var(--body-bg);
+    background-color: var(--page-bg);
+    box-shadow: 1px 1px 50px var(--page-bg);
 }
 
 header {

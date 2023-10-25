@@ -1,3 +1,6 @@
+/*
+    font file imports
+*/
 @font-face {
     font-family: 'Fraunces';
     font-style: italic;
@@ -30,16 +33,8 @@
     src: url('/assets/fonts/fraunces-600.woff2') format('woff2');
 }
 
-html {
-    font-size: 18px;
-
-    @media all and (min-width: $med) {
-        font-size: 21px;
-    }
-}
-
 /*
-    body font declaration
+    global font setup
 */
 body {
     font-family: 'Fraunces', Georgia, serif;
@@ -47,6 +42,14 @@ body {
     font-weight: 200;
     color: var(--body);
     letter-spacing: 0;
+}
+
+html {
+    font-size: 18px;
+
+    @media all and (min-width: $med) {
+        font-size: 21px;
+    }
 }
 
 /*
@@ -92,19 +95,18 @@ p {
     margin: 0.5rem 0;
 }
 
-
 /*
     links
 */
 a {
-    color: var(--primary-hover);
+    color: var(--primary);
     text-decoration-thickness: from-font;
     font-weight: 600;
 
     &:hover,
     &:focus {
-        background: var(--primary-hover);
-        color: var(--body-bg);
+        background: var(--primary);
+        color: var(--light-text);
     }
 }
 
@@ -114,14 +116,14 @@ a.back {
 }
 
 /*
-    Global focus style
+    global focus style
 */
 *:focus {
-    outline: 1px dashed color-mix(in srgb, var(--primary-hover) 25%, transparent);
+    outline: 1px dashed color-mix(in srgb, var(--primary) 25%, transparent);
 }
 
 /*
-    Content elements
+    simple typographic elements
 */
 small, .small {
     font-size: smaller;

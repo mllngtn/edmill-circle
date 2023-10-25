@@ -4,14 +4,16 @@
     /*
         Colours
     */
+    --body-bg: #d2e5f1;
+    --page-bg: #f4fbff;
+
     --body: #021620;
-    --primary: var(--body);
+
+    --primary: #136a95;
     --primary-hover: #136a95;
-    --body-inverted: #d2e5f1;
-    --body-inverted-hover: var(--primary);
-    --body-bg: #f4fbff;
-    --bg-after: #d2e5f1;
-    --primary-lighter: color-mix(in srgb, var(--primary-hover) 5%, transparent);
+    --primary-lighter: color-mix(in srgb, var(--primary) 5%, transparent);
+
+    --light-text: var(--page-bg);
 
     --warning: #edb277;
     --warning-hover: #8a5c2f;

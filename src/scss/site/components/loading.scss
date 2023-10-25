@@ -1,3 +1,6 @@
+/*
+    styles for the loading div
+*/
 .loading {
     @extend %flex-center;
 
@@ -12,8 +15,8 @@
     width: 40px;
     border-radius: 50%;
     border: 2px solid var(--body-bg);
-    border-left: 4px solid var(--primary-hover);
-    border-bottom: 3px solid var(--primary-hover);
+    border-left: 4px solid var(--primary);
+    border-bottom: 3px solid var(--primary);
     animation: spin 1s infinite linear;
 }
 

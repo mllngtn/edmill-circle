@@ -1,9 +1,12 @@
+/*
+    buttons!
+*/
 button,
 .button {
     padding: 0.25rem 1rem;
-    border: 1px solid var(--primary-hover);
-    background-color: var(--primary-hover);
-    color: var(--body-bg);
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+    color: var(--light-text);
     border-radius: 5px;
 
     &.warning {
