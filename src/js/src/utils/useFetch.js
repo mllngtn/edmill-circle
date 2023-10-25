@@ -3,7 +3,7 @@ import { cache } from './cache.js';
 /*
     useFetch will fire its callback function twice:
         1) first, with cached data,
-        2) then with new data;
+        2) then with new data
 */
 export function useFetch({
     url = null,
@@ -28,9 +28,9 @@ export function useFetch({
     }
     
     /*
-        then, do a fetch request to grab the latest response.
+        then, perform a fetch request for the latest response.
         pass the latest response to our callback function,
-        and cache the latest response.
+        and cache the latest response
     */
     async function doFetch() {
 

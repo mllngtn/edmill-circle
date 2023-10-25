@@ -9,7 +9,7 @@ export function usePost({
 }) {
 
     /*
-        then, do a fetch request to post our data, and
+        peform a fetch request to post our data, and
         get a response back.
         pass this response to our callback function
     */

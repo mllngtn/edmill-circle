@@ -32,26 +32,31 @@
             <p>
                 Price: <b>${{ book.price }}</b>
             </p>
-            <button 
-                v-if="book.availableStock > 0"
-                class="button"
-                v-on:click="purchaseBook"
-            >
-                Buy now
-            </button>
-            <button  
-                v-else
-                class="button"
-                disabled
-            >
-                Out of stock
-            </button>
-            <p 
-                v-if="5 >= book.availableStock && book.availableStock > 0"
-                class="small warning"
-            >
-                Only {{ book.availableStock }} left in stock
-            </p>
+            <template v-if="!isPurchasing">
+                <button 
+                    v-if="book.availableStock > 0"
+                    class="button"
+                    v-on:click="purchaseBook"
+                >
+                    Buy now
+                </button>
+                <button  
+                    v-else
+                    class="button"
+                    disabled
+                >
+                    Out of stock
+                </button>
+                <p 
+                    v-if="5 >= book.availableStock && book.availableStock > 0"
+                    class="small warning"
+                >
+                    Only {{ book.availableStock }} left in stock
+                </p>
+            </template>
+            <template v-else>
+                <div class="spinner" title="loading"></div>
+            </template>
         </div>
     </div>
 </template>

@@ -7,26 +7,28 @@
 	import { ref } from 'vue';
 
 	import { config } from '../config/config.js';
-
     import { useFetch } from '../utils/useFetch.js';
     import { usePost } from '../utils/usePost.js';
 
     const route = useRoute();
-    const book = ref();
 
-    // set book details with data returned from api call
+    const book = ref();
+    const isPurchasing = ref(false);
+
+    // use given book data to set book details
     function setBookValue(data) {
 
         if (data.book) {
             book.value = data.book;
         }
 
+        isPurchasing.value = false;
+
     }
 
     // call api to fetch book data
     function fetchBook() {
 
-        // fetch book
         useFetch({
             url: config.url + '/' + route.params.id,
             queryName: 'book-' + route.params.id,
@@ -35,7 +37,7 @@
 
     }
     
-    // fetch book on component load
+    // fetch book data on component load
     fetchBook();
 
     // display alert message after purchase request
@@ -56,8 +58,10 @@
 
     }
 
-    // call api to purchase book
+    // call api with purchase request
     function purchaseBook() { // eslint-disable-line no-unused-vars
+
+        isPurchasing.value = true;
 
         usePost({
             url: config.url + '/' + route.params.id + '/purchase',
