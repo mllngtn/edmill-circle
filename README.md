@@ -6,7 +6,7 @@ My attempt at Circle's front-end developer challenge!
 
 I created a static, single-page site using 11ty to house my project. I find it to be a really intuitive tool, and it's what i used for my own site (https://edmill.dev).
 
-The site assets (js and css) are built via commands in the gulpfile, which also runs eslint and stylelint. 
+The site assets (js and css) are built via commands in the gulpfile, which also runs eslint and stylelint to ensure consistency.
 
 The site styles are written in .scss, before being compiled to a template file which is inlined as critical css. There are only 6kb of styles, so there was no need to defer any of the css on this project.
 
