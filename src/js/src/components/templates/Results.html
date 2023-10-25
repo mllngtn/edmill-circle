@@ -1,35 +1,55 @@
 <template v-if="!resultsStore.loading">
+    <h2>
+        Today's picks
+    </h2>
+    <p>
+        Non eram nescius, Brute, cum, quae summis ingeniis exquisitaque doctrina philosophi Graeco sermone tractavissent, ea Latinis litteris mandaremus, fore ut hic noster labor in varias reprehensiones incurreret. nam quibusdam, et iis quidem non admodum indoctis, totum hoc displicet philosophari. quidam autem non tam id reprehendunt, si remissius agatur, sed tantum studium tamque multam operam ponendam in eo non arbitrantur.
+    </p>
     <ul
-        class="small grid books"
+        class="grid books"
     >
         <li
             v-for="book in resultsStore.books"
             :key="book.id"
-            class="grid-item"
+            class="grid-item small"
         >
             <router-link :to="{ name: 'Book', params: { id: book.id } }">
                 <picture>
                     <img 
                         loading="lazy"
-                        src="" 
+                        src="../../../../assets/images/cover.jpg" 
                         alt=""
                         width="200"
                         height="300"
                     />
                 </picture>
-                <p class="grid-item__text small">
+                <p class="grid-item__text">
                     <span class="grid-item__title">
                         {{ book.title }}
                     </span>
                     <br/> 
                     <span>
                         {{ book.author }}
-                    </span>
-                    <br/>
-                    <i class="small">
-                        ${{ book.price }}
-                    </i>
+                    </span>                    
                 </p>
+                <span
+                    v-if="book.availableStock > 5"
+                    class="button small"
+                >
+                    in stock
+                </span>
+                <span 
+                    v-else-if="5 >= book.availableStock > 0"
+                    class="button small warning"
+                >
+                    low stock
+                </span>
+                <span 
+                    v-else
+                    class="button small disabled"
+                >
+                    out of stock
+                </span>
             </router-link>
         </li>
     </ul>

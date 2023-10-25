@@ -2,20 +2,54 @@
     grid-template-columns: repeat(auto-fill, calc(50% - 0.5rem));
     grid-gap: 0.5rem;
 
+    @media all and (min-width: $xs) {
+        grid-template-columns: repeat(auto-fill, calc(100% / 3 - 0.5rem));
+    }
+
     @media all and (min-width: $sml) {
-        grid-template-columns: repeat(auto-fill, calc(100% / 3 - 0.75rem));
+        grid-template-columns: repeat(auto-fill, calc(25% - 0.75rem));
         grid-gap: 0.75rem;
     }
 
     @media all and (min-width: $med) {
-        grid-template-columns: repeat(auto-fill, calc(25% - 0.5rem));
+        grid-template-columns: repeat(auto-fill, calc(20% - 0.5rem));
         grid-gap: 0.5rem;
     }
 
     @media all and (min-width: $lge) {
-        grid-template-columns: repeat(auto-fill, calc(20% - 0.75rem));
+        grid-template-columns: repeat(auto-fill, calc(100% / 6 - 0.75rem));
     }
+}
 
+.books a {
+    color: initial;
+    font-weight: 100;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+        color: var(--primary-hover);
+
+        picture {
+            background-color: var(--primary-hover);
+            opacity:0.8;
+        }
+
+        .button {
+            opacity: 1;
+        }
+    }
+}
+
+.books a .button {
+    display: block;
+    opacity: 0;
+    text-align: center;
 }
 
 .filter {

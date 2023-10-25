@@ -5,12 +5,8 @@
 
 ul.grid {
     list-style-type: none;
-    margin: 0;
+    margin: 1rem 0 0;
     padding: 0;
-}
-
-.grid-item {
-    padding-bottom: var(--global-padding);
 }
 
 .grid-item picture {
