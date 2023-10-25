@@ -1,19 +1,16 @@
 <template v-if="!resultsStore.loading">
-    <p v-if="introText" v-html="introText">
-    </p>
-
     <ul
         class="small grid books"
     >
         <li
             v-for="book in resultsStore.books"
-            :key="book.node.id"
+            :key="book.id"
             class="grid-item"
         >
             <picture>
                 <img 
                     loading="lazy"
-                    v-bind:src="book.node.featuredImage.node.sourceUrl" 
+                    src="" 
                     alt=""
                     width="200"
                     height="300"
@@ -21,19 +18,16 @@
             </picture>
             <p class="grid-item__text small">
                 <span class="grid-item__title">
-                    {{ book.node.title }}
+                    {{ book.title }}
                 </span>
                 <br/> 
-                <span v-for="(author, index) in book.node.bookAuthors.nodes">
-                    {{ author.name }}<span v-if="index !== book.node.bookAuthors.nodes.length - 1">, </span>
+                <span>
+                    {{ book.author }}
                 </span>
                 <br/>
-                <i class="small" v-for="type in book.node.bookTypes.nodes">
-                    {{ type.name }}
-                </i>, 
-                <i class="small" v-for="format in book.node.bookFormats.nodes">
-                    {{ format.name }}
-                </i> 
+                <i class="small">
+                    ${{ book.price }}
+                </i>
             </p>
         </li>
     </ul>

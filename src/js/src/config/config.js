@@ -1,8 +1,5 @@
-const url = 'https://blog.edmill.co.uk/graphql';
-
-const resultsPerPage = 12;
+const url = 'http://localhost:8000/books/';
 
 export const config = {
     url,
-    resultsPerPage,
 };

@@ -1,42 +1,9 @@
-<main 
-    class="
-        typography
-        {% if title === 'Ed Millington' %}
-            intro
-        {% endif %}
-    "
->
-    {% if title !== 'Ed Millington' %}
-        <h1>
-            {{ title }}
-        </h1>
-    {% endif %}
-
-    {% if hero %}
-        <picture class="hero">
-            <img
-                srcset="
-                    {{ hero }}-640.jpg 640w,
-                    {{ hero }}-900.jpg 900w,
-                    {{ hero }}-1500.jpg 1500w,
-                    {{ hero }}-2048.jpg 2048w
-                "
-                src="{{ hero }}-640.jpg"
-                sizes="(min-width: 850px) 67vw, 100vw"
-                width="640"
-                height="320"
-                alt="" 
-            />
-        </picture>
-    {% endif %}          
+<main>
 
     {{ content | safe }}
 
-    {% if title === 'Virtual Bookshelf' %}
-
-        <div id="edmill-reading-list">
-            <!-- Reading list app -->
-        </div>
-    {% endif %}
+    <div id="edmill-book-store">
+        <!-- Book store app -->
+    </div>
 
 </main>

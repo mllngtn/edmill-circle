@@ -5,98 +5,27 @@ html {
 body {
     min-width: 100vw;
     min-height: 100vh;
-    background-color: var(--bg-color-after);
-    opacity: 0;
-
-    &.js-loaded {
-        opacity: 1;
-    }
+    background-color: var(--primary-hover);
 }
 
 .page {
     width: 100%;
     margin: 0 auto;
-    max-width: var(--page-width);
-    padding: 1em;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-
-    @media all and (min-width: $med) {
-        padding: var(--global-padding);
-    }
-}
-
-header,
-main {
     background-color: var(--body-bg);
-}
-
-main.intro {
-    background: transparent;
+    max-width: var(--page-width);
+    min-height: 100vh;
+    box-shadow: 1px 1px 50px var(--body);
 }
 
 header {
     width: 100%;
-    padding: var(--global-padding);
     margin-bottom: var(--global-margin);
-
-    @media all and (min-width: $med) {
-        max-width: 300px;
-        margin-right: var(--global-margin);
-        margin-bottom: 0;
-    }
 }
 
 main {
-    flex: 1;
-}
-
-.page-title {
-    display: block;
-    position: relative;
-    padding-left: 44px;
-    text-decoration: none;
-}
-
-.page-title .site-logo {
-    position: absolute;
-    height: 45px;
-    width: 45px;
-    z-index: 1;
-    left: -10px;
-    fill: var(--site-icon);
-    top: 3px;
+    padding: 1em;
 
     @media all and (min-width: $med) {
-        top: 8px;
-    }
-}
-
-.page-title:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 50%;
-    margin-top: -20px;
-    left: -10px;
-    height: 45px;
-    width: 45px;
-    border-radius: 50%;
-    background-color: var(--primary);
-}
-
-.page-title:hover:after,
-.page-title:focus:after {
-    background-color: var(--primary-hover);
-}
-
-details summary {
-    cursor: default;
-
-    &:hover,
-    &:focus {
-        color: var(--primary-hover);
-        text-decoration: underline;
+        padding: var(--global-padding);
     }
 }

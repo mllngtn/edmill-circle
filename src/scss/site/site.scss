@@ -6,15 +6,5 @@
 @import './shared/typography';
 @import './shared/grid';
 
-@import './components/background';
-@import './components/menu';
 @import './components/hero';
-@import './components/reading-list';
-@import './components/projects';
-@import './components/image-text';
-
-@import '../theme_dark';
-@import '../theme_light';
-@import '../theme_pink';
-@import '../theme_red';
-
+@import './components/results';

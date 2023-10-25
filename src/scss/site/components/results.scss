@@ -8,18 +8,14 @@
     }
 
     @media all and (min-width: $med) {
-        grid-template-columns: repeat(auto-fill, calc(50% - 0.5rem));
+        grid-template-columns: repeat(auto-fill, calc(25% - 0.5rem));
         grid-gap: 0.5rem;
     }
 
-    @media all and (min-width: $ml) {
-        grid-template-columns: repeat(auto-fill, calc(100% / 3 - 0.75rem));
-        grid-gap: 0.75rem;
+    @media all and (min-width: $lge) {
+        grid-template-columns: repeat(auto-fill, calc(20% - 0.75rem));
     }
 
-    @media all and (min-width: $lge) {
-        grid-template-columns: repeat(auto-fill, calc(25% - 0.75rem));
-    }
 }
 
 .filter {

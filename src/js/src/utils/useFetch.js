@@ -7,7 +7,7 @@ import { cache } from './cache.js';
 */
 export function useFetch({
     url = null,
-    query = null,
+    queryName = null,
     callback = function doCallback() {
 
         console.log('error: useFetch requires a callback function');
@@ -19,14 +19,14 @@ export function useFetch({
         first, check if we have a cached response to this query.
         if so, pass that response to our callback function
     */
-    const cached = JSON.parse(cache.retrieve(query));
+    const cached = JSON.parse(cache.retrieve(queryName));
 
     if (cached) {
 
         callback(cached);
 
     }
-
+    
     /*
         then, do a fetch request to grab the latest response.
         pass the latest response to our callback function,
@@ -35,15 +35,17 @@ export function useFetch({
     async function doFetch() {
 
         const response = await fetch(url, {
-            method: 'POST',
+            method: 'GET',
             credentials: 'same-origin',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: query,
         });
 
         const data = await response.json();
+
+        console.log('hello data!');
+        console.log(data);
 
         // if the new data is the same as the old, then do nothing
         if (JSON.stringify(data) === JSON.stringify(cached)) {
@@ -54,8 +56,10 @@ export function useFetch({
 
         callback(data);
 
-        cache.save(query, JSON.stringify(data));
-
+        /*
+            Save our new results to the cache
+        */
+        cache.save(queryName, JSON.stringify(data));
     }
 
     doFetch();
