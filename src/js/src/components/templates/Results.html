@@ -7,28 +7,30 @@
             :key="book.id"
             class="grid-item"
         >
-            <picture>
-                <img 
-                    loading="lazy"
-                    src="" 
-                    alt=""
-                    width="200"
-                    height="300"
-                />
-            </picture>
-            <p class="grid-item__text small">
-                <span class="grid-item__title">
-                    {{ book.title }}
-                </span>
-                <br/> 
-                <span>
-                    {{ book.author }}
-                </span>
-                <br/>
-                <i class="small">
-                    ${{ book.price }}
-                </i>
-            </p>
+            <router-link :to="{ name: 'Book', params: { id: book.id } }">
+                <picture>
+                    <img 
+                        loading="lazy"
+                        src="" 
+                        alt=""
+                        width="200"
+                        height="300"
+                    />
+                </picture>
+                <p class="grid-item__text small">
+                    <span class="grid-item__title">
+                        {{ book.title }}
+                    </span>
+                    <br/> 
+                    <span>
+                        {{ book.author }}
+                    </span>
+                    <br/>
+                    <i class="small">
+                        ${{ book.price }}
+                    </i>
+                </p>
+            </router-link>
         </li>
     </ul>
 </template>

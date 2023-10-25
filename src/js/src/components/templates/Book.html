@@ -1,0 +1,26 @@
+<template v-if="book">
+    <router-link to="/">
+        &lt; Back
+    </router-link>
+    <h2>
+        {{ book.title }}
+    </h2>
+    <h3>
+        {{ book.author }}
+    </h3>
+    <p>
+        Price: ${{ book.price }}
+    </p>
+    <p class="small">
+        ISBN: {{ book.isbn }}
+    </p>
+    <button v-if="book.availableStock > 0">
+        Buy now
+    </button>
+    <button disabled v-else>
+        Out of stock
+    </button>
+</template>
+<p v-else>
+    Loading...
+</p>
